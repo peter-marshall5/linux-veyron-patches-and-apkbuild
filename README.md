@@ -20,8 +20,8 @@ Headphone Jack Detection | ✔️
 Headset Microphone | ✔️
 Internal Microphone | ✖️ (1)
 Wifi | ✔️
-Wifi Hotspot | ✔️
-Wifi Monitor Mode | ✖️
+Wifi Hotspot and Ad-Hoc | ✔️
+Wifi Monitor Mode | ✖️ (3)
 Bluetooth | ✔️ (\*)
 Charger Detection | ✔️
 Lid Switch | ✔️
@@ -35,9 +35,12 @@ LRNG framework | ✔️
 Clang Thin LTO | ✔️ (*)
 
 (1): This is likely due to the ALSA configuration and UCM that I'm using.
-(2): Reboots to recovery mode only, probably an easy fix.
 
-(*): Mainline feature that works with patches
+(2): Reboots to recovery mode, probably an easy fix.
+
+(3): Likely unsupported by chipset (BCM4354).
+
+(\*): Mainline feature that works with patches
 
 # Overclocking
 
