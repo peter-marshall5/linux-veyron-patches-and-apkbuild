@@ -8,6 +8,7 @@ Feature | Status
 --- | ---
 Internal Storage | ✔️ (\*)
 Display | ✔️
+GPU acceleration via Panfrost | ✔️
 Backlight Control | ✔️
 HDMI output | ✔️ (\*)
 USB 2.0 | ✔️
@@ -19,8 +20,7 @@ Headphone Output | ✔️
 Headphone Jack Detection | ✔️
 Headset Microphone | ✔️
 Internal Microphone | ✖️ (1)
-Wifi | ✔️
-Wifi Hotspot and Ad-Hoc | ✔️
+Wifi (Client, AP, Ad-Hoc) | ✔️
 Wifi Monitor Mode | ✖️ (3)
 Bluetooth | ✔️ (\*)
 Charger Detection | ✔️
