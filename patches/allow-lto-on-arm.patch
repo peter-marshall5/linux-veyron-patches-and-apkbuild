@@ -1,0 +1,25 @@
+diff --git a/arch/arm/boot/compressed/Makefile b/arch/arm/boot/compressed/Makefile
+index 41bcbb4..92ee4c4 100644
+--- a/arch/arm/boot/compressed/Makefile
++++ b/arch/arm/boot/compressed/Makefile
+@@ -98,6 +98,7 @@ targets       := vmlinux vmlinux.lds piggy_data piggy.o \
+ 		 head.o $(OBJS)
+ 
+ KBUILD_CFLAGS += -DDISABLE_BRANCH_PROFILING
++KBUILD_CFLAGS := $(filter-out $(CC_FLAGS_LTO), $(KBUILD_CFLAGS))
+ 
+ ccflags-y := -fpic $(call cc-option,-mno-single-pic-base,) -fno-builtin \
+ 	     -I$(srctree)/scripts/dtc/libfdt -fno-stack-protector \
+diff --git a/arch/arm/Kconfig b/arch/arm/Kconfig
+index 7630ba9..27fcd98 100644
+--- a/arch/arm/Kconfig
++++ b/arch/arm/Kconfig
+@@ -2,6 +2,8 @@
+ config ARM
+ 	bool
+ 	default y
++	select ARCH_SUPPORTS_LTO_CLANG if CPU_LITTLE_ENDIAN
++	select ARCH_SUPPORTS_LTO_CLANG_THIN
+ 	select ARCH_32BIT_OFF_T
+ 	select ARCH_CORRECT_STACKTRACE_ON_KRETPROBE if HAVE_KRETPROBES && FRAME_POINTER && !ARM_UNWIND
+ 	select ARCH_HAS_BINFMT_FLAT
