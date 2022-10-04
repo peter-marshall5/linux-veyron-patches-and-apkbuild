@@ -10,7 +10,7 @@ Internal Storage | ✔️ (\*)
 Display | ✔️
 Backlight Control | ✔️
 HDMI output | ✔️ (\*)
-USB | ✔️
+USB 2.0 | ✔️
 Keyboard | ✔️
 Touchpad | ✔️
 Battery Monitoring | ✔️
@@ -25,13 +25,19 @@ Wifi Monitor Mode | ✖️
 Bluetooth | ✔️ (\*)
 Charger Detection | ✔️
 Lid Switch | ✔️
-Suspend | ✔️
 CPU, GPU, and battery thermals | ✔️
+Suspend | ✔️
 Shutdown | ✔️
 Rebooting | ~ (2)
+Real Time Clock | ✔️
+BMQ scheduler | ✔️
+LRNG framework | ✔️
+Clang Thin LTO | ✔️ (*)
 
 (1): This is likely due to the ALSA configuration and UCM that I'm using.
-(2): Reboots to recovery mode only, probaboly an easy fix.
+(2): Reboots to recovery mode only, probably an easy fix.
+
+(*): Mainline feature that works with patches
 
 # Overclocking
 
