@@ -19,26 +19,24 @@ Internal Speakers | ✔️
 Headphone Output | ✔️
 Headphone Jack Detection | ✔️
 Headset Microphone | ✔️
-Internal Microphone | ✖️ (1)
+Internal Microphone | ✔️ (1)
 Wifi (Client, AP, Ad-Hoc) | ✔️
-Wifi Monitor Mode | ✖️ (3)
+Wifi Monitor Mode | ✖️ (2)
 Bluetooth | ✔️ (\*)
 Charger Detection | ✔️
 Lid Switch | ✔️
 CPU, GPU, and battery thermals | ✔️
 Suspend | ✔️
 Shutdown | ✔️
-Rebooting | ~ (2)
+Rebooting | ✔️
 Real Time Clock | ✔️
 BMQ scheduler | ✔️
 LRNG framework | ✔️
 Clang Thin LTO | ✔️ (*)
 
-(1): This is likely due to the ALSA configuration and UCM that I'm using.
+(1): Requires switching the audio profile to "Off" and back after using the headset microphone. Very likely a UCM issue.
 
-(2): Reboots to recovery mode, probably an easy fix.
-
-(3): Likely unsupported by chipset (BCM4354).
+(2): Likely unsupported by chipset (BCM4354).
 
 (\*): Mainline feature that works with patches
 
